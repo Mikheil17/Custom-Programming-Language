@@ -1,0 +1,11 @@
+PROGRAM IFTRUE;
+VAR
+    X : INTEGER;
+BEGIN
+    X := 5;
+
+    IF X > 3 THEN
+        WRITE('TRUE BRANCH');
+
+    WRITE('DONE')
+END

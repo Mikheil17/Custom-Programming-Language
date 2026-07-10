@@ -1,0 +1,58 @@
+PROGRAM BOUNCER;
+VAR
+    AGE : INTEGER;
+    HASID : INTEGER;
+    ANSWER : INTEGER;
+    SCORE : INTEGER;
+    ROUND : INTEGER;
+BEGIN
+    SCORE := 0;
+    ROUND := 1;
+
+    WRITE('Welcome to Club Compiler.');
+    WRITE('Enter your age.');
+    READ(AGE);
+
+    WRITE('Do you have an ID? Enter 1 for yes or 0 for no.');
+    READ(HASID);
+
+    WHILE ROUND < 4
+    BEGIN
+        IF ROUND = 1 THEN
+            WRITE('Are you on the list? Enter 1 for yes or 0 for no.')
+        ELSE
+            IF ROUND = 2 THEN
+                WRITE('Are you here to start drama? Enter 1 for yes or 0 for no.')
+            ELSE
+                WRITE('Do you promise not to seg fault in the club? Enter 1 for yes or 0 for no.');
+
+        READ(ANSWER);
+
+        IF ROUND = 1 AND ANSWER = 1 THEN
+            SCORE := SCORE + 1
+        ELSE
+            IF ROUND = 2 AND ANSWER = 0 THEN
+                SCORE := SCORE + 1
+            ELSE
+                IF ROUND = 3 AND ANSWER = 1 THEN
+                    SCORE := SCORE + 1
+                ELSE
+                    SCORE := SCORE + 0;
+
+        ROUND := ROUND + 1
+    END;
+
+    WRITE('Bouncer score:');
+    WRITE(SCORE);
+
+    IF AGE > 20 AND HASID = 1 AND SCORE > 1 THEN
+        WRITE('You may enter. Please do not start a syntax error.')
+    ELSE
+        IF AGE < 21 THEN
+            WRITE('Denied. Come back when you are 21.')
+        ELSE
+            IF HASID = 0 THEN
+                WRITE('Denied. The bouncer believes in documentation.')
+            ELSE
+                WRITE('Denied. The bouncer did not like your vibe.')
+END

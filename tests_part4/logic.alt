@@ -1,0 +1,113 @@
+PROGRAM LOGICALT;
+VAR
+    X : INTEGER;
+    Y : INTEGER;
+    Z : INTEGER;
+    A : INTEGER;
+    B : INTEGER;
+    C : INTEGER;
+    SCORE : INTEGER;
+BEGIN
+    SCORE := 0;
+
+    WRITE('Enter X.');
+    READ(X);
+
+    WRITE('Enter Y.');
+    READ(Y);
+
+    WRITE('Enter Z.');
+    READ(Z);
+
+    WRITE('Enter A.');
+    READ(A);
+
+    WRITE('Enter B.');
+    READ(B);
+
+    WRITE('Enter C.');
+    READ(C);
+
+    IF (X AND Y) THEN
+    BEGIN
+        WRITE('Test 1 passed: X AND Y.');
+        SCORE := SCORE + 1
+    END
+    ELSE
+        WRITE('Test 1 failed: X AND Y.');
+
+    IF (Z OR A) THEN
+    BEGIN
+        WRITE('Test 2 passed: Z OR A.');
+        SCORE := SCORE + 1
+    END
+    ELSE
+        WRITE('Test 2 failed: Z OR A.');
+
+    IF (NOT B) THEN
+    BEGIN
+        WRITE('Test 3 passed: NOT B.');
+        SCORE := SCORE + 1
+    END
+    ELSE
+        WRITE('Test 3 failed: NOT B.');
+
+    IF (X + Y * Z > A) THEN
+    BEGIN
+        WRITE('Test 4 passed: X + Y * Z > A.');
+        SCORE := SCORE + 1
+    END
+    ELSE
+        WRITE('Test 4 failed: X + Y * Z > A.');
+
+    IF ((X + Y) * Z <> C) THEN
+    BEGIN
+        WRITE('Test 5 passed: grouped math not equal C.');
+        SCORE := SCORE + 1
+    END
+    ELSE
+        WRITE('Test 5 failed: grouped math not equal C.');
+
+    IF (A MOD Y = B) THEN
+    BEGIN
+        WRITE('Test 6 passed: A MOD Y = B.');
+        SCORE := SCORE + 1
+    END
+    ELSE
+        WRITE('Test 6 failed: A MOD Y = B.');
+
+    IF (-X + C > Z) THEN
+    BEGIN
+        WRITE('Test 7 passed: negative X plus C > Z.');
+        SCORE := SCORE + 1
+    END
+    ELSE
+        WRITE('Test 7 failed: negative X plus C > Z.');
+
+    IF (NOT (B OR 0)) THEN
+    BEGIN
+        WRITE('Test 8 passed: NOT grouped OR.');
+        SCORE := SCORE + 1
+    END
+    ELSE
+        WRITE('Test 8 failed: NOT grouped OR.');
+
+    IF ((X AND Y) OR B) THEN
+    BEGIN
+        WRITE('Test 9 passed: grouped AND then OR.');
+        SCORE := SCORE + 1
+    END
+    ELSE
+        WRITE('Test 9 failed: grouped AND then OR.');
+
+    IF ((A - C) < (X * Z)) THEN
+    BEGIN
+        WRITE('Test 10 passed: arithmetic on both sides.');
+        SCORE := SCORE + 1
+    END
+    ELSE
+        WRITE('Test 10 failed: arithmetic on both sides.');
+
+    WRITE('Final score:');
+    WRITE(SCORE)
+END

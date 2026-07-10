@@ -1,0 +1,29 @@
+PROGRAM TYPESHOW;
+VAR
+    COUNT : INTEGER;
+    PRICE : REAL;
+    TOTAL : REAL;
+    NARROW : INTEGER;
+    BIG : INTEGER;
+BEGIN
+    WRITE('Enter an INTEGER count:');
+    READ(COUNT);
+
+    WRITE('Enter a REAL price:');
+    READ(PRICE);
+
+    WRITE('Testing mixed-type math: COUNT * PRICE');
+    TOTAL := COUNT * PRICE;
+    WRITE(TOTAL);
+
+    WRITE('Now assigning a REAL result into INTEGER NARROW');
+    WRITE('Your behavior here should be intentional');
+    NARROW := PRICE + 2;
+    WRITE(NARROW);
+
+    WRITE('Now testing a possible INTEGER overflow case');
+    WRITE('If this exceeds INTEGER range, your behavior should be intentional');
+    WRITE('Possible outcomes: overflow error, warning, or incorrect wrapped value');
+    BIG := COUNT * 1000000000;
+    WRITE(BIG)
+END

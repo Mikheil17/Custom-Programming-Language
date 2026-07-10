@@ -1,0 +1,175 @@
+PROGRAM MOTH;
+VAR
+    X : INTEGER;
+    Y : INTEGER;
+    TEST : INTEGER;
+    EMPTY : INTEGER;
+BEGIN
+    X := 67;
+    Y := 0;
+    TEST := 0;
+    EMPTY := 0;
+
+    WRITE('The purpose of this test is to test every part of your code.');
+    WRITE('It is to make sure your code works or to test your design choices.');
+    WRITE('If your code fails a test, do not worry, it could be a feature for all we know.');
+    WRITE('You just have to justify your decision to us.');
+    WRITE('Enter a number to continue.....');
+    READ(EMPTY);
+    WRITE('');
+
+    WRITE('expecting NOT(NOT(X = 67)) is TRUE');
+    WRITE('expecting NOT(X = 67) != 1 is TRUE');
+    IF(NOT(NOT(X = 67)) AND NOT(X = 67) != 1) THEN
+        WRITE('not test passed')
+    ELSE
+        WRITE('not test failed');
+    WRITE('');
+
+    WRITE('expecting X = 67 is TRUE');
+    IF(X = 67) THEN
+        WRITE('equal too test passed')
+    ELSE
+        WRITE('equal too test failed');
+    WRITE('');
+            
+    WRITE('expecting X != 68 is TRUE');
+    IF(X != 68) THEN
+        WRITE('not equal too test passed')
+    ELSE
+        WRITE('not equal too test failed');
+    WRITE('');
+
+    WRITE('expecting ((X * 420) / 5) = 5628 is TRUE');
+    IF(((X * 420) / 5) = 5628) THEN
+        WRITE('arithmitic test passed')
+    ELSE
+        WRITE('arithmitic test failed');
+    WRITE('');
+
+    WRITE('expecting 1 is TRUE');
+    WRITE('(X = 68) is FALSE');
+    IF(1 OR (X = 68)) THEN
+        WRITE('short circuit test passed')
+    ELSE
+        WRITE('short circuit test failed');
+    WRITE('');
+
+    WRITE('expecting 0 is FALSE');
+    WRITE('(X = 67) is TRUE');
+    IF(0 AND (X = 67)) THEN
+        WRITE('short circuit test 2 failed')
+    ELSE
+        WRITE('short circuit test 2 passed');
+    WRITE('');
+
+    Y := 2;
+
+    WRITE('expecting X = 67 is TRUE');
+    WRITE('expecting Y = 2 is TRUE');
+    WRITE('expecting Y = 1 is FALSE');
+    IF(X = 67 AND (Y = 2 OR Y = 1)) THEN
+        WRITE('embedded conditions test passed')
+    ELSE
+        WRITE('embedded conditions test failed');
+    WRITE('');
+
+    X := 1000;
+
+    WHILE X != 1
+    BEGIN
+        X /= 2
+    END;
+
+    WRITE('expecting X = 1');
+    IF(X = 1) THEN
+        WRITE('division test passed')
+    ELSE
+        WRITE('division test failed');
+    WRITE('');
+
+    X := 50;
+    X := X MOD 2;
+
+
+    WRITE('expecting X = 0');
+    IF(X = 0) THEN
+        WRITE('modulo test passed')
+    ELSE
+        WRITE('modulo test failed');
+    WRITE('');
+
+    X := 0;
+
+    WHILE X != 50
+    BEGIN
+        X += 2
+    END;
+
+    WRITE('expecting X = 50');
+    IF(X = 50) THEN
+        WRITE('+= test passed')
+    ELSE
+        WRITE('+= test failed');
+    WRITE('');
+
+    WHILE X != 0
+    BEGIN
+        X -= 2
+    END;
+
+    WRITE('expecting X = 0');
+    IF(X = 0) THEN
+        WRITE('-= test passed')
+    ELSE
+        WRITE('-= test failed');
+    WRITE('');
+
+    X := 1;
+
+    WHILE X != 15625
+    BEGIN
+        X *= 5
+    END;
+
+    WRITE('expecting X = 15625');
+    IF(X = 15625) THEN
+        WRITE('*= test passed')
+    ELSE
+        WRITE('*= test failed');
+    WRITE('');
+
+    X := TEST;
+
+    WRITE('expecting X = 0');
+    IF(X = 0) THEN
+        WRITE('variable assignment test passed')
+    ELSE 
+        WRITE('variable assignment test failed');
+    WRITE('');
+
+    WRITE('expecting X > 0 is TRUE');
+    IF(X > 0) THEN
+        WRITE('greater than test passed')
+    ELSE
+        WRITE('greater than test failed');
+    WRITE('');
+
+    WRITE('expecting X < 0 is TRUE');
+    IF(X < 0) THEN
+        WRITE('less than test passed')
+    ELSE
+        WRITE('less than test failed');
+    WRITE('');
+
+    X := -100;
+
+    X := X MOD 2;
+
+    IF(X = 0) THEN
+        WRITE('neg mod test passed')
+    ELSE
+        WRITE('neg mod test failed');
+    WRITE('')
+
+END

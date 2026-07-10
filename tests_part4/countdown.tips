@@ -1,0 +1,12 @@
+PROGRAM CONTDOWN;
+VAR
+    X : INTEGER;
+BEGIN
+    X := 5;
+    WHILE X > 0
+    BEGIN
+        WRITE(X);
+        X += -1
+    END;
+    WRITE('DONE')
+END

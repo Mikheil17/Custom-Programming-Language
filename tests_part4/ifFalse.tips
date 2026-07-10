@@ -1,0 +1,11 @@
+PROGRAM IFFALSE;
+VAR
+    X : INTEGER;
+BEGIN
+    X := 2;
+
+    IF X > 3 THEN
+        WRITE('SHOULD NOT PRINT');
+
+    WRITE('DONE')
+END

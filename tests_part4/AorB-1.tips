@@ -1,0 +1,55 @@
+PROGRAM AORB;
+VAR
+    GRADE1 : REAL;
+    GRADE2 : REAL;
+    GRADE3 : REAL;
+    GRADE4 : REAL;
+    GRADE5 : REAL;
+BEGIN
+    GRADE1 := 89.0;
+    GRADE2 := 89.9;
+    GRADE3 := 89.9999;
+    GRADE4 := 89.999999;
+    GRADE5 := 89.99999999;
+
+    WRITE('Student Grades:');
+    WRITE(GRADE1);
+    WRITE(GRADE2);
+    WRITE(GRADE3);
+    WRITE(GRADE4);
+    WRITE(GRADE5);
+    WRITE('');
+
+    WRITE('Student Letter Grades:');
+    IF GRADE1 < 90.0
+    THEN
+        WRITE('B')
+    ELSE
+        WRITE('A');
+
+    IF GRADE2 < 90.0
+    THEN
+        WRITE('B')
+    ELSE
+        WRITE('A');
+
+    IF GRADE3 < 90.0
+    THEN
+        WRITE('B')
+    ELSE
+        WRITE('A');
+
+    IF GRADE4 < 90.0
+    THEN
+        WRITE('B')
+    ELSE
+        WRITE('A');
+
+    IF GRADE5 < 90.0
+    THEN
+        WRITE('B')
+    ELSE
+        WRITE('A');
+
+    WRITE('')
+END

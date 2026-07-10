@@ -1,0 +1,29 @@
+## DEBUG ME!
+
+PROGRAM TEMP;
+VAR
+    X : INTEGER;
+    Y : INTEGER;
+
+BEGIN
+
+WRITE('Got here!');
+
+X:= 1;
+Y:=0;
+
+WHILE X AND -Y      ## ?!?!
+    BEGIN
+        WRITE('Got here now! In the while loop!');
+        Y:= 1       ## TODO figure out why breaking
+    END;
+
+IF NOT(X > Y)           ## does this work?
+THEN
+    WRITE('Got here, if statement')
+ELSE
+    WRITE('Got here, else');
+
+WRITE('Made it to the end!')
+
+END

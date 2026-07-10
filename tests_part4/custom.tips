@@ -1,0 +1,20 @@
+PROGRAM CUSTOM;
+VAR
+    X : INTEGER;
+BEGIN
+    X := 1;
+
+    IF X > 3 THEN   ##Comment
+        WRITE('You should not see this');
+    IF X = 1 THEN    
+        WRITE('You should see this');
+
+        
+
+    /*Big
+    Comment */
+
+    X += 3;
+        WRITE(X)
+
+END

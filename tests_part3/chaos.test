@@ -1,0 +1,99 @@
+PROGRAM DRCHAOS;
+VAR
+  SECRET : INTEGER;
+  X      : INTEGER;
+  Y      : INTEGER;
+  Z      : INTEGER;
+BEGIN
+  WRITE('========================================');
+  WRITE('       DR. CHAOS CALIBRATION SUITE      ');
+  WRITE('========================================');
+  WRITE('Enter one integer for ceremonial suffering.');
+  READ(SECRET);
+
+  WRITE(' ');
+  WRITE('=== PHASE 1: THE MACHINE MOCKS INPUT ===');
+  WRITE('No matter what you typed, this should become 7.');
+
+  X := SECRET;
+  X := X * 3;
+  X := X + 21;
+  X := X / 3;
+  X := X - SECRET;
+  WRITE(X);
+
+  WRITE(' ');
+  WRITE('=== PHASE 2: CURSED CONSTANT FORGE ===');
+
+  X := (((-6 * -11) + (14 / 2)) - 7);
+  WRITE(X);
+
+  Y := (((5 + 8) * 6) - 11);
+  WRITE(Y);
+
+  Z := (((-8 * -9) + 4) - (3 - 3));
+  WRITE(Z);
+
+  WRITE(' ');
+  WRITE('=== PHASE 3: ASSIGNMENT GAUNTLET ===');
+
+  X := 120;
+  X := X / 2;
+  X := X + ((-3 * -4) - 6);
+  WRITE(X);
+
+  Y := 100;
+  Y := Y - ((8 * 4) - (-1));
+  WRITE(Y);
+
+  Z := -11;
+  Z := Z * ((-3) + (-4));
+  WRITE(Z);
+
+  X := 308;
+  X := X / ((-3 * -4) - 8);
+  WRITE(X);
+
+  WRITE(' ');
+  WRITE('=== PHASE 4: BIG OUTLIER PANIC ===');
+
+  Y := 1000;
+  Y := Y - ((3 * 100) + (2 * 10) + 13);
+  WRITE(Y);
+
+  Z := -500;
+  Z := Z * -2;
+  Z := Z - 323;
+  WRITE(Z);
+
+  WRITE(' ');
+  WRITE('=== PHASE 5: NEGATIVE GOBLIN CHAMBER ===');
+
+  X := ((13 - -5) * 4) + 5;
+  WRITE(X);
+
+  Y := -(-(-5));
+  Y := Y + 72;
+  WRITE(Y);
+
+  Z := (((-9 * -9) - 5) / (3 - 2));
+  WRITE(Z);
+
+  WRITE(' ');
+  WRITE('=== PHASE 6: FINAL BOSS NUMBERS ===');
+
+  X := 1024;
+  X := X - ((2 * 100) + (5 * 10) + 8);
+  WRITE(X);
+
+  Y := 2048;
+  Y := Y / 2;
+  Y := Y - ((4 * 60) + (3 * 5) + 2);
+  WRITE(Y);
+
+  WRITE(' ');
+  WRITE('If your answers are all 6s and 7s,');
+  WRITE('the parser lives.');
+  WRITE('If not, Dr. Chaos feeds.');
+  SPAWN
+END

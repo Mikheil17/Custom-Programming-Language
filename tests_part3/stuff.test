@@ -1,0 +1,21 @@
+PROGRAM STUFF;
+VAR
+    SCORE : INTEGER;
+    BONUS : INTEGER;
+BEGIN
+    WRITE('Testing compound assignments and SPAWN');
+    
+    SCORE := 10;
+    BONUS := 3;
+
+    SCORE += 5;
+    SCORE *= 2;
+    SCORE -= BONUS;
+    SCORE /= 4;
+
+    WRITE('SCORE after +=5, *=2, -=3, and /=9');
+    WRITE(SCORE);
+
+    WRITE('Now let SPAWN do whatever chaotic thing you designed it to do');
+    SPAWN
+END

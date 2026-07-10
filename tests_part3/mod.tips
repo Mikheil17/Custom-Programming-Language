@@ -1,0 +1,49 @@
+PROGRAM MODTEST;
+VAR
+    TIME : INTEGER;
+    RAND : INTEGER;
+    MULT : INTEGER;
+    M    : INTEGER;
+    INC  : INTEGER;
+BEGIN
+  READ(TIME);
+
+  MULT := 3;
+  M := 7;
+  INC := 3;
+
+  WRITE('TIME:');
+  WRITE(TIME);
+
+  WRITE('Expected: (3 * TIME)');
+  RAND := (MULT * TIME);
+  WRITE(RAND);
+
+  WRITE('Expected: ((3 * TIME) + 3) MOD 7');
+  RAND := (RAND + INC) MOD M;
+  WRITE(RAND);
+
+  WRITE('Expected: ((3 * TIME) + 3) MOD 7 again');
+  RAND := ((MULT * TIME) + INC) MOD M;
+  WRITE(RAND);
+
+  WRITE('Expected: (3 * (TIME + 3)) MOD 7');
+  RAND := (MULT * (TIME + INC)) MOD M;
+  WRITE(RAND);
+
+  WRITE('Expected: ((3 * (TIME MOD 7)) + 3) MOD 7');
+  RAND := ((MULT * (TIME MOD M)) + INC) MOD M;
+  WRITE(RAND);
+
+  WRITE('Expected: 21 MOD 7 = 0');
+  RAND := 21 MOD 7;
+  WRITE(RAND);
+
+  WRITE('Expected: 22 MOD 7 = 1');
+  RAND := 22 MOD 7;
+  WRITE(RAND);
+
+  WRITE('Expected: 20 MOD 7 = 6');
+  RAND := 20 MOD 7;
+  WRITE(RAND)
+END
