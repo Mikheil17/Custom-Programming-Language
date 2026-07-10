@@ -19,7 +19,8 @@ Descriptive error handling for invalid syntax
 ## Context
 Created as a capstone project for Theory & Implementation of Programming Languages class
 
-<img src="https://github.com/Mikheil17/Custom-Programming-Language/blob/main/Img1.jpg" width="400"> <img src="https://github.com/Mikheil17/Custom-Programming-Language/blob/main/Img2.jpg" width="400">
+<img src="https://github.com/Mikheil17/Custom-Programming-Language/blob/main/Img1.jpg" width="400">
+<img src="https://github.com/Mikheil17/Custom-Programming-Language/blob/main/Img2.jpg" width="400">
 
 ## How to Run
  
